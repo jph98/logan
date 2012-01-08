@@ -1,0 +1,16 @@
+<!doctype html>
+
+{% include 'header.html' %}
+
+{% include 'search.html' %}
+
+<div class="logcontainer" style="margin-top: 20px">
+{# Mark content as HTML safe to output #} 
+
+<div class="contentpane">
+{{ content|safe }}
+</div>
+
+</div>
+
+{% include 'footer.html' %}

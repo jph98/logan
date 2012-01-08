@@ -1,0 +1,13 @@
+grepnumlines: 250
+searchbeforecontext: 2
+searchaftercontext: 2
+
+extensions:
+ - log
+ - out
+
+directories:
+ - /var/log
+ - /Users/jonathan/temp
+
+ 

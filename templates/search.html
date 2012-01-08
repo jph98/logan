@@ -1,0 +1,20 @@
+<div class="searchcontainer">
+<form id="searchform" action="/grep/" method="POST">
+
+  <p>Grep search context before: 
+    <input name="grepbefore" type="text" class="searchnumfield" value="{{ session['searchbeforecontext'] }}"/>
+    and after: 
+    <input name="grepafter" type="text" class="searchnumfield" value="{{ session['searchaftercontext'] }}"/>
+  </p>
+
+  Search logs for:   
+  <input name="expression" type="text" class="searchfield"/>
+  <input type="submit" value="Search" class="searchbutton"/>
+  <input type="button" value="Reset Form" onClick="this.form.reset()" />
+  
+	{% if error %}
+    	<p class="errormsg"><strong>Error:</strong> {{ error }}
+	{% endif %}
+
+</form>
+</div>

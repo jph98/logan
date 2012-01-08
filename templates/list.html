@@ -1,0 +1,19 @@
+<!doctype html>
+{% include 'header.html' %}
+
+{% include 'search.html' %}
+
+{% macro genlink(func, filename) -%}
+    <a href="{{func}}/{{ filename }}/{{ session['grepnumlines'] }}">{{func}}</a>
+{%- endmacro %}
+
+{% for filename in session['validfiles']|sort %}
+	<div class="logfile">
+		{{ session['validfiles'].get(filename)[0] }} - 
+		{{ genlink('head', filename) }} &nbsp;<span style="color:#cecece">&#124;</span> &nbsp;
+		{{ genlink('tail', filename) }}
+		- {{ session['validfiles'].get(filename)[1] }} bytes
+	</div>
+{% endfor %}
+
+{% include 'footer.html' %}

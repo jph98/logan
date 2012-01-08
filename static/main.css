@@ -1,0 +1,87 @@
+body {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	background-color:#f2f2f2;
+	text-align:center;
+}
+
+.wrapper {
+margin: 0 auto;
+width:934px;
+text-align:left;
+padding:20px;
+background-color:#fff;
+}
+
+a, a:hover, a:visited {
+	color:#FF3333;
+	text-decoration:none;
+}
+
+a:hover {
+
+	text-decoration:underline;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight:normal;
+	text-transform: uppercase;
+	color:#5E2612;
+}
+
+h1 a, h1 a:hover, h1 a:active, h1 a:visited {
+	color:#5E2612;
+}
+
+.searchcontainer {
+margin:20px 0;
+padding:10px;
+background-color:#f2f2f2;
+}
+
+.searchcontainer p {
+
+padding:5px 0;
+margin:0;
+}
+
+.contentpane {
+	font-family: courier;
+	font-size: 10px;
+}
+
+.searchnumfield {
+	width: 50px;
+}
+
+.errormsg {
+	color: red;
+	font-size: 12px;
+	display: inline;
+}
+
+.highlightmatch {
+	color: #00FF00;
+	font-weight: bold;
+}
+
+.filetitlelink {
+	display: block;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.detailprint {
+	font-size: 10px;
+}
+
+.logfile {
+	padding: 5px 0;
+	border-bottom: 1px solid #cecece;
+	margin-bottom: 5px;
+}
+
+.searchoptions {
+	margin-top: 10px; 
+	margin-bottom: 10px;
+}

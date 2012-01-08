@@ -1,0 +1,23 @@
+<!doctype html>
+
+{% include 'header.html' %}
+
+{% include 'search.html' %}
+
+{% if filepaths %}
+
+	<p style="font-weight: bold">Overview Results:</p>
+	<p>Found results for '{{expression}}' in the following <span class="detailprint">(click for detailed results):</span></p>
+	{% for path in filepaths %}
+		<div class="logfile"><a href="#filename{{ loop.index }}">{{ path }}</a></div>
+	{% endfor %}
+
+	<p style="font-weight: bold">Detailed Results:</p>
+	<div class="contentpane">
+		{# Mark content as HTML safe to output #} 
+		{{ output|safe }}
+	</div>
+	
+{% endif %}
+
+{% include 'footer.html' %}
