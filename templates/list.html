@@ -4,7 +4,7 @@
 {% include 'search.html' %}
 
 {% macro genlink(func, filename) -%}
-    <a href="{{func}}/{{ filename }}/{{ session['grepnumlines'] }}">{{func}}</a>
+    <a href="/{{func}}/{{ filename }}/{{ session['grepnumlines'] }}">{{func}}</a>
 {%- endmacro %}
 
 {% for filename in session['validfiles']|sort %}
