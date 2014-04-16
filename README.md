@@ -1,16 +1,15 @@
 Logan Log Viewer
 ================
 
-logan is a web based interface real-time log viewer/searcher.
+![Logan Screenshot](https://raw.githubusercontent.com/jph98/logan/master/logan.png)
+
+Logan is a web based interface real-time log viewer/searcher.
 
 Built upon:
 * Python 2.6 
 * Flask (Provides a simple web interface) - http://flask.pocoo.org/
 * Pytailer (tail comamnd wrapper) - http://code.google.com/p/pytailer/ 
 * Grin (grep command wrapper) - http://pypi.python.org/pypi/grin
-
-![Logan Screenshot](https://raw.githubusercontent.com/jph98/logan/master/logan.png)
-
 
 Installation
 ------------
