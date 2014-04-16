@@ -9,6 +9,8 @@ Built upon:
 * Pytailer (tail comamnd wrapper) - http://code.google.com/p/pytailer/ 
 * Grin (grep command wrapper) - http://pypi.python.org/pypi/grin
 
+!https://github.com/jph98/logan/blob/master/logan.png
+
 Installation
 ------------
 
