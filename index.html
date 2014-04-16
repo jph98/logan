@@ -1,62 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Logan : Python web based interface for log viewing/searching (tail/head/grep)" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Logan by jph98</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Logan</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Logan</h1>
+        <p>Python web based interface for log viewing/searching (tail/head/grep)</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jph98/logan">View on GitHub</a>
+        <p class="view"><a href="https://github.com/jph98/logan">View the Project on GitHub <small>jph98/logan</small></a></p>
 
-          <h1 id="project_title">Logan</h1>
-          <h2 id="project_tagline">Python web based interface for log viewing/searching (tail/head/grep)</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jph98/logan/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jph98/logan/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/jph98/logan/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jph98/logan/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jph98/logan">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h1>
 <a name="logan-log-viewer" class="anchor" href="#logan-log-viewer"><span class="octicon octicon-link"></span></a>Logan Log Viewer</h1>
 
-<p>logan is a web based interface or log viewing/searching using tail/head and grep
-Built upon:</p>
+<p><img src="https://raw.githubusercontent.com/jph98/logan/master/logan.png" alt="Logan Screenshot"></p>
+
+<p>Logan is a web based interface real-time log viewer/searcher.</p>
+
+<p>Built upon:</p>
 
 <ul>
 <li>Python 2.6 </li>
-<li>Flask - <a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>
+<li>Flask (Provides a simple web interface) - <a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>
 </li>
-<li>Pytailer - <a href="http://code.google.com/p/pytailer/">http://code.google.com/p/pytailer/</a> </li>
-<li>Grin - <a href="http://pypi.python.org/pypi/grin">http://pypi.python.org/pypi/grin</a>
+<li>Pytailer (tail comamnd wrapper) - <a href="http://code.google.com/p/pytailer/">http://code.google.com/p/pytailer/</a> </li>
+<li>Grin (grep command wrapper) - <a href="http://pypi.python.org/pypi/grin">http://pypi.python.org/pypi/grin</a>
 </li>
-</ul>
-      </section>
-    </div>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Logan maintained by <a href="https://github.com/jph98">jph98</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+<p>Install dependencies with:</p>
+
+<pre><code>sudo pip install flask pyyaml tailer grin
+</code></pre>
+
+<p>Then run:</p>
+
+<pre><code>./logagent.py
+</code></pre>
+
+<h2>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Look at logagentconfig.yaml:</p>
+
+<p>Specifies the number of lines to display maximum:</p>
+
+<pre><code>grepnumlines: 250
+</code></pre>
+
+<p>Specifies the number of lines before/after the match to display:</p>
+
+<pre><code>searchbeforecontext: 2
+searchaftercontext: 2
+</code></pre>
+
+<p>Specifies the valid extensions for files found in 'directories':</p>
+
+<pre><code>extensions:
+ - log
+ - out
+</code></pre>
+
+<p>To configure the directories to view/search within:</p>
+
+<pre><code>directories:
+ - /var/log
+ - /Users/jonathan/temp
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jph98">jph98</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
