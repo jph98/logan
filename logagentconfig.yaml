@@ -3,12 +3,13 @@ searchbeforecontext: 2
 searchaftercontext: 2
 
 extensions:
+ - log
 
 directories:
+ - /var/log
 
 logfiles:
+ - /home/user/userlog.log
 
 logfile_glob:
- - /var/log/maillog
- - /var/log/maillog-????????.gz
-
+ - /opt/application/log/newlog-????????.log
