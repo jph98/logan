@@ -117,17 +117,32 @@ def list():
 	# Only allow tail/grep on files in the directory
 	validfiles = {}
 	
-	# Filter log files for dirs specified in the config
-	for dir in config['directories']:	
-		for ext in config['extensions']:
-			# Glob for all files matching the ones specified in the conig
-			paths = glob.glob(dir + "/*." + ext)
-			for path in paths:
-				process_path(validfiles, path)
-		
-	session['grepnumlines'] = str(config['grepnumlines'])	
+    # Filter log files for dirs specified in the config
+    if config['directories']:
+            for dir in config['directories']:
+                    if config['extensions']:
+                            for ext in config['extensions']:
+                                    # Glob for all files matching the ones specified in the conig
+                                    paths = glob.glob(dir + "/*." + ext)
+                                    for path in paths:
+                                            process_path(validfiles, path)
+
+    # Filter log files for files explicitly specified in the config
+    if config['logfiles']:
+            for file in config['logfiles']:
+                    process_path(validfiles, file)
+
+    # Filter log files for globs specified in the config
+    if config['logfile_glob']:
+            for item in config['logfile_glob']:
+                    filelist = glob.glob(item)
+                    for file in filelist:
+                            process_path(validfiles, file)
+
+	                                                                   	
+	session['grepnumlines'] = str(config['grepnumlines'])              	
 	session['searchbeforecontext'] = str(config['searchbeforecontext'])	
-	session['searchaftercontext'] = str(config['searchaftercontext'])	
+	session['searchaftercontext'] = str(config['searchaftercontext'])  	
 	session['validfiles'] = validfiles
 	return render_template('list.html')
 

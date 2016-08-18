@@ -3,11 +3,12 @@ searchbeforecontext: 2
 searchaftercontext: 2
 
 extensions:
- - log
- - out
 
 directories:
- - /var/log
- - /Users/jonathan/temp
 
- 
+logfiles:
+
+logfile_glob:
+ - /var/log/maillog
+ - /var/log/maillog-????????.gz
+
