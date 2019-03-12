@@ -4,10 +4,12 @@ searchaftercontext: 2
 
 extensions:
  - log
- - out
 
 directories:
  - /var/log
- - /Users/jonathan/temp
 
- 
+logfiles:
+ - /home/user/userlog.log
+
+logfile_glob:
+ - /opt/application/log/newlog-????????.log
