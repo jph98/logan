@@ -1,0 +1,4 @@
+[console_scripts]
+grin = grin:grin_main
+grind = grin:grind_main
+

@@ -9,7 +9,7 @@ directories:
  - /var/log
 
 logfiles:
- - /home/user/userlog.log
+#  - /home/user/userlog.log
 
 logfile_glob:
- - /opt/application/log/newlog-????????.log
+#  - /opt/application/log/newlog-????????.log
